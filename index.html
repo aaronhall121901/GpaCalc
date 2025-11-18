@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPA Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__body container">
+        <p class="eyebrow">Academic toolkit</p>
+        <h1>Instant GPA calculator</h1>
+        <p class="lede">
+          Track course grades, experiment with credit loads, and instantly see how each
+          scenario affects your standard 4.0 GPA.
+        </p>
+        <div class="hero__actions">
+          <button id="addCourseTop" class="btn btn--primary">Add course</button>
+          <button id="loadSample" class="btn btn--ghost">Load sample data</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container grid">
+      <section class="card" aria-labelledby="courses-title">
+        <div class="card__header">
+          <div>
+            <h2 id="courses-title">Courses</h2>
+            <p class="muted">Use the controls on each row to fine-tune credits and letter grades.</p>
+          </div>
+          <div class="card__actions">
+            <button id="addCourse" class="btn btn--primary">Add course</button>
+            <button id="clearCourses" class="btn btn--ghost">Clear all</button>
+          </div>
+        </div>
+
+        <div class="table-wrapper" role="region" aria-live="polite">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Course</th>
+                <th scope="col">Credits</th>
+                <th scope="col">Grade</th>
+                <th scope="col">Pts</th>
+                <th scope="col" class="actions-col">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="courseRows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card summary" aria-labelledby="summary-title">
+        <div class="card__header">
+          <div>
+            <h2 id="summary-title">GPA summary</h2>
+            <p class="muted">Updates instantly as you make changes.</p>
+          </div>
+        </div>
+        <div class="summary__grid">
+          <article>
+            <p class="muted">Current GPA</p>
+            <p class="summary__number" id="gpaValue">0.000</p>
+          </article>
+          <article>
+            <p class="muted">Attempted credits</p>
+            <p class="summary__number" id="totalCredits">0</p>
+          </article>
+          <article>
+            <p class="muted">Quality points</p>
+            <p class="summary__number" id="qualityPoints">0.000</p>
+          </article>
+        </div>
+        <div class="summary__foot" id="summaryMessage">Add a course to get started.</div>
+      </section>
+
+      <section class="card" aria-labelledby="tips-title">
+        <div class="card__header">
+          <div>
+            <h2 id="tips-title">Tips</h2>
+            <p class="muted">Nothing is saved. Export or take notes if you want to keep a copy.</p>
+          </div>
+        </div>
+        <ul class="tips">
+          <li>Grade points follow the standard 4.0 scale and update automatically as you change letters.</li>
+          <li>Adjust credits to model partial terms, labs, or combined lecture/lab loads.</li>
+          <li>Load the sample data for a quick demo, then tweak the numbers.</li>
+        </ul>
+      </section>
+    </main>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
