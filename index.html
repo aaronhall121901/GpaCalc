@@ -269,8 +269,34 @@
       .muted {
         color: var(--muted);
       }
+      /* Additional non-critical CSS - inlined for performance */
+      .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+      .primary-nav a:focus,.primary-nav a:hover{color:var(--primary)}
+      @media (min-width:900px){.grid{grid-template-columns:2fr 1fr;grid-auto-rows:min-content}#tips-title,.summary{grid-column:2/3}.summary{align-self:start}}
+      .card--longform{margin-top:2rem}
+      .btn--primary:hover{background:var(--primary-dark);transform:translateY(-1px);box-shadow:0 14px 30px rgba(37,99,235,.35)}
+      .btn--primary:focus-visible{outline:2px solid rgba(255,255,255,.6);outline-offset:2px;transform:translateY(-1px)}
+      @media (prefers-reduced-motion:reduce){.btn,.btn--primary{transition:none}.btn--primary,.btn--primary:focus-visible,.btn--primary:hover{transform:none}}
+      input,select{width:100%;padding:.5rem .65rem;border-radius:.75rem;border:1px solid rgba(148,163,184,.7);font-size:.95rem;background:#fff}
+      input:focus,select:focus{outline:2px solid rgba(37,99,235,.35);border-color:var(--primary)}
+      .actions-col{text-align:center;width:80px}
+      .row-actions button{border:none;background:0 0;color:#ef4444;font-weight:600;cursor:pointer}
+      .tips{margin:0;padding-left:1.2rem;color:var(--muted);display:flex;flex-direction:column;gap:.4rem}
+      .tips li::marker{color:var(--primary-dark)}
+      .points-display{display:inline-block;padding:.4rem .65rem;border-radius:.75rem;background:rgba(15,23,42,.05);font-weight:600;min-width:3rem;text-align:center}
+      .longform__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem}
+      .longform__grid h3{margin-top:0}
+      .cta{margin-top:1.5rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem}
+      .faq{display:grid;gap:1rem;margin:0}
+      .faq__item dt{font-weight:700;margin-bottom:.25rem}
+      .faq__item dd{margin:0;color:var(--muted)}
+      .site-footer{background:#0f172a;color:#fff;padding:2rem 0;margin-top:3rem}
+      .footer__content{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;align-items:center}
+      .footer__link{color:#93c5fd;text-decoration:none;font-weight:600}
+      .footer__link:focus,.footer__link:hover{text-decoration:underline}
+      @media (max-width:640px){.card__actions,.hero__actions{width:100%}.btn,.hero__actions .btn{width:100%;text-align:center}.primary-nav ul{flex-wrap:wrap;justify-content:flex-start}}
+      @media (max-width:720px){.hero{padding:2.5rem 0 1.5rem}.hero__top{flex-direction:column;align-items:flex-start;gap:.75rem}.primary-nav{width:100%}.primary-nav ul{width:100%;gap:.5rem}.primary-nav a{flex:1 1 calc(50% - .5rem);text-align:center;padding:.45rem .6rem;border-radius:999px;background:rgba(15,23,42,.05)}.card{padding:1.25rem;border-radius:1rem}.card__header{flex-direction:column;align-items:flex-start}.grid{gap:1.25rem}.summary__grid{grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}.cta{flex-direction:column;align-items:flex-start}.footer__content{flex-direction:column;align-items:flex-start}.table-wrapper{overflow:visible}table{min-width:0;border-collapse:separate;border-spacing:0}thead{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}tbody,td,th,tr{display:block;width:100%}tbody tr{border:1px solid rgba(15,23,42,.08);border-radius:1rem;padding:1rem;margin-bottom:1rem;background:#fff;box-shadow:var(--shadow)}tbody tr td{padding:0;margin-bottom:.75rem}tbody tr td:last-child{margin-bottom:0}tbody tr td::before{content:attr(data-label);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:.2rem}.actions-col{width:100%;text-align:left}.row-actions button{width:100%;padding:.65rem 1rem;border-radius:.85rem;background:rgba(239,68,68,.08)}tbody tr.empty-state{padding:1rem;border-style:dashed;box-shadow:none}.empty-state td{margin-bottom:0}}
     </style>
-    <link rel="stylesheet" href="styles.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
