@@ -174,14 +174,96 @@
         border: 1px solid rgba(148, 163, 184, 0.3);
         contain: layout style;
       }
+      .card__header {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 1.5rem;
+      }
+      .card__header h2 {
+        margin: 0;
+      }
+      .card__header p {
+        margin: 0.2rem 0 0;
+      }
+      .card__actions {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+      }
       .grid {
         display: grid;
         gap: 1.5rem;
         padding-bottom: 3rem;
       }
+      @media (min-width: 900px) {
+        .grid {
+          grid-template-columns: 2fr 1fr;
+          grid-auto-rows: min-content;
+        }
+        .summary {
+          grid-column: 2 / 3;
+          align-self: start;
+        }
+      }
       .table-wrapper {
         overflow-x: auto;
         min-height: 11rem;
+        contain: layout;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 640px;
+      }
+      thead th {
+        text-align: left;
+        font-size: 0.85rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--muted);
+        padding-bottom: 0.5rem;
+      }
+      tbody tr {
+        border-top: 1px solid rgba(15, 23, 42, 0.07);
+      }
+      td {
+        padding: 0.75rem 0.25rem;
+        vertical-align: middle;
+      }
+      td:first-child,
+      th:first-child {
+        padding-left: 0.25rem;
+      }
+      .empty-state td {
+        padding: 2rem 0.5rem;
+        text-align: center;
+        color: var(--muted);
+        font-style: italic;
+      }
+      .summary__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1rem;
+      }
+      .summary__number {
+        font-size: 2rem;
+        margin: 0.2rem 0 0;
+        font-weight: 600;
+        font-variant-numeric: tabular-nums;
+      }
+      .summary__foot {
+        margin-top: 1.5rem;
+        padding: 0.85rem 1rem;
+        border-radius: 0.85rem;
+        background: rgba(37, 99, 235, 0.08);
+        color: var(--primary-dark);
+        font-weight: 500;
+        min-height: 3.5rem;
+        height: 3.5rem;
+        display: flex;
+        align-items: center;
         contain: layout;
       }
       .muted {
