@@ -198,21 +198,47 @@ h1 {
   font-weight: 600;
   cursor: pointer;
   font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn--primary {
   background: var(--primary);
   color: #fff;
-  transition: background 0.2s ease;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform, box-shadow;
 }
 
 .btn--primary:hover {
   background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.35);
 }
 
 .btn--ghost {
   background: var(--ghost);
   color: var(--primary-dark);
+}
+
+.btn--primary:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 2px;
+  transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .btn--primary {
+    transition: none;
+  }
+
+  .btn--primary,
+  .btn--primary:hover,
+  .btn--primary:focus-visible {
+    transform: none;
+  }
 }
 
 .table-wrapper {
