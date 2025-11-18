@@ -21,6 +21,12 @@ const state = {
 	courses: [],
 };
 
+const EMPTY_STATE_HTML = `
+	<tr class="empty-state">
+		<td colspan="5">Add your first course to start calculating.</td>
+	</tr>
+`;
+
 const sampleCourses = [
 	{ name: "Calculus", credits: 5, grade: "A-" },
 	{ name: "Biology", credits: 4, grade: "B+" },
@@ -39,24 +45,13 @@ function createCourse(overrides = {}) {
 	};
 }
 
-function ensureCourses() {
-	if (state.courses.length === 0) {
-		state.courses = [createCourse()];
-	}
-}
-
 function addCourse(overrides = {}) {
-	ensureCourses();
 	state.courses = [...state.courses, createCourse(overrides)];
 	renderCourses();
 }
 
 function removeCourse(id) {
-	if (state.courses.length === 1) {
-		state.courses = [createCourse()];
-	} else {
-		state.courses = state.courses.filter((course) => course.id !== id);
-	}
+	state.courses = state.courses.filter((course) => course.id !== id);
 	renderCourses();
 }
 
@@ -111,7 +106,12 @@ function updateSummary() {
 }
 
 function renderCourses() {
-	ensureCourses();
+	if (state.courses.length === 0) {
+		courseRowsEl.innerHTML = EMPTY_STATE_HTML;
+		updateSummary();
+		return;
+	}
+
 	courseRowsEl.innerHTML = "";
 	state.courses.forEach((course, index) => {
 		courseRowsEl.appendChild(renderCourseRow(course, index));
@@ -179,7 +179,6 @@ function renderCourseRow(course, index) {
 		updateCourse(course.id, { grade: newGrade });
 	});
 
-	removeBtn.disabled = state.courses.length === 1;
 	removeBtn.addEventListener("click", () => removeCourse(course.id));
 
 	return tr;
@@ -200,5 +199,3 @@ const currentYearEl = document.querySelector("#currentYear");
 if (currentYearEl) {
 	currentYearEl.textContent = new Date().getFullYear();
 }
-
-renderCourses();

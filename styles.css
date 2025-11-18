@@ -217,6 +217,7 @@ h1 {
 
 .table-wrapper {
   overflow-x: auto;
+  min-height: 11rem;
 }
 
 table {
@@ -291,6 +292,7 @@ select:focus {
   font-size: 2rem;
   margin: 0.2rem 0 0;
   font-weight: 600;
+  font-variant-numeric: tabular-nums;
 }
 
 .summary__foot {
@@ -300,6 +302,9 @@ select:focus {
   background: rgba(37, 99, 235, 0.08);
   color: var(--primary-dark);
   font-weight: 500;
+  min-height: 3.5rem;
+  display: flex;
+  align-items: center;
 }
 
 .tips {
@@ -323,6 +328,13 @@ select:focus {
   font-weight: 600;
   min-width: 3rem;
   text-align: center;
+}
+
+.empty-state td {
+  padding: 2rem 0.5rem;
+  text-align: center;
+  color: var(--muted);
+  font-style: italic;
 }
 
 .longform__grid {
