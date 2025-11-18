@@ -123,23 +123,23 @@ function renderCourseRow(course, index) {
 	const tr = document.createElement("tr");
 	tr.dataset.id = course.id;
 	tr.innerHTML = `
-		<td>
+		<td data-label="Course">
 			<label class="sr-only" for="course-${course.id}-name">Course name</label>
 			<input id="course-${course.id}-name" type="text" placeholder="Course ${index + 1}" />
 		</td>
-		<td>
+		<td data-label="Credits">
 			<label class="sr-only" for="course-${course.id}-credits">Credits</label>
 			<input id="course-${course.id}-credits" type="number" min="0" max="30" step="0.5" />
 		</td>
-		<td>
+		<td data-label="Grade">
 			<label class="sr-only" for="course-${course.id}-grade">Letter grade</label>
 			<select id="course-${course.id}-grade"></select>
 		</td>
-		<td>
+		<td data-label="Pts">
 			<span class="sr-only" id="course-${course.id}-points-label">Grade points</span>
 			<span class="points-display" aria-labelledby="course-${course.id}-points-label" aria-live="polite"></span>
 		</td>
-		<td class="actions-col">
+		<td class="actions-col" data-label="Actions">
 			<div class="row-actions">
 				<button type="button" aria-label="Remove course">Remove</button>
 			</div>
