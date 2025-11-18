@@ -14,6 +14,11 @@
   --ghost: rgba(37, 99, 235, 0.08);
 }
 
+@font-face {
+  font-family: "Segoe UI";
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -49,6 +54,7 @@ body#top {
 
 .hero {
   padding: 3.5rem 0 2rem;
+  contain: layout;
 }
 
 .hero__top {
@@ -163,6 +169,7 @@ h1 {
   padding: 1.5rem;
   box-shadow: var(--shadow);
   border: 1px solid rgba(148, 163, 184, 0.3);
+  contain: layout style;
 }
 
 .card--longform {
@@ -244,6 +251,7 @@ h1 {
 .table-wrapper {
   overflow-x: auto;
   min-height: 11rem;
+  contain: layout;
 }
 
 table {
@@ -329,8 +337,10 @@ select:focus {
   color: var(--primary-dark);
   font-weight: 500;
   min-height: 3.5rem;
+  height: 3.5rem;
   display: flex;
   align-items: center;
+  contain: layout;
 }
 
 .tips {
