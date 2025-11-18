@@ -4,6 +4,7 @@ const courseRowsEl = document.querySelector("#courseRows");
 const addCourseButtons = [
 	document.querySelector("#addCourse"),
 	document.querySelector("#addCourseTop"),
+	document.querySelector("#addCourseBottom"),
 ].filter(Boolean);
 const clearCoursesBtn = document.querySelector("#clearCourses");
 const loadSampleBtn = document.querySelector("#loadSample");
@@ -194,5 +195,10 @@ clearCoursesBtn?.addEventListener("click", () => {
 });
 
 loadSampleBtn?.addEventListener("click", () => loadSampleData());
+
+const currentYearEl = document.querySelector("#currentYear");
+if (currentYearEl) {
+	currentYearEl.textContent = new Date().getFullYear();
+}
 
 renderCourses();

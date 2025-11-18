@@ -3,11 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GPA Calculator</title>
+    <title>GPA Calculator | Free 4.0 Scale Grade Point Average Planner</title>
+    <meta
+      name="description"
+      content="Free GPA calculator that lets you project grade point averages on the 4.0 scale, plan credits, and model best-case or recovery scenarios for college or high school."
+    />
+    <meta
+      name="keywords"
+      content="GPA calculator, grade point average, college GPA, 4.0 scale, credit planner, semester GPA"
+    />
+    <meta name="author" content="GPA Calculator Team" />
+    <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large" />
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="canonical" href="https://gpa-calculator.app/" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232563eb'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Segoe UI, Inter, Arial' font-size='30' fill='white'%3EGPA%3C/text%3E%3C/svg%3E"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="GPA Calculator | Free 4.0 Scale Grade Point Average Planner" />
+    <meta
+      property="og:description"
+      content="Model course loads, credit hours, and grades to see exactly how your GPA shifts before registration closes."
+    />
+    <meta property="og:url" content="https://gpa-calculator.app/" />
+    <meta property="og:site_name" content="GPA Calculator" />
+    <meta property="og:image" content="https://gpa-calculator.app/social-card.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Instant GPA Calculator" />
+    <meta
+      name="twitter:description"
+      content="Plug in credits and letter grades to forecast your GPA on the standard 4.0 scale."
+    />
+    <meta name="twitter:image" content="https://gpa-calculator.app/social-card.png" />
     <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "GPA Calculator",
+        "operatingSystem": "Web",
+        "applicationCategory": "EducationalApplication",
+        "description": "Interactive GPA calculator that supports unlimited courses, instant 4.0 scale math, and scenario planning.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "url": "https://gpa-calculator.app/"
+      }
+    </script>
   </head>
-  <body>
-    <header class="hero">
+  <body id="top">
+    <a class="skip-link" href="#mainContent">Skip to main content</a>
+    <header class="hero" role="banner">
+      <div class="hero__top container">
+        <a class="brand" href="#top" aria-label="GPA Calculator home">GPA Calculator</a>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <ul>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
       <div class="hero__body container">
         <p class="eyebrow">Academic toolkit</p>
         <h1>Instant GPA calculator</h1>
@@ -22,8 +84,9 @@
       </div>
     </header>
 
-    <main class="container grid">
-      <section class="card" aria-labelledby="courses-title">
+    <main id="mainContent">
+      <div class="container grid">
+        <section id="courses" class="card" aria-labelledby="courses-title">
         <div class="card__header">
           <div>
             <h2 id="courses-title">Courses</h2>
@@ -51,7 +114,7 @@
         </div>
       </section>
 
-      <section class="card summary" aria-labelledby="summary-title">
+        <section id="summary" class="card summary" aria-labelledby="summary-title">
         <div class="card__header">
           <div>
             <h2 id="summary-title">GPA summary</h2>
@@ -75,7 +138,7 @@
         <div class="summary__foot" id="summaryMessage">Add a course to get started.</div>
       </section>
 
-      <section class="card" aria-labelledby="tips-title">
+        <section class="card" aria-labelledby="tips-title">
         <div class="card__header">
           <div>
             <h2 id="tips-title">Tips</h2>
@@ -87,8 +150,136 @@
           <li>Adjust credits to model partial terms, labs, or combined lecture/lab loads.</li>
           <li>Load the sample data for a quick demo, then tweak the numbers.</li>
         </ul>
+        </section>
+      </div>
+
+      <section id="how-it-works" class="container card card--longform" aria-labelledby="how-title">
+        <div class="card__header">
+          <div>
+            <h2 id="how-title">How the GPA calculator works</h2>
+            <p class="muted">Know exactly how letter grades translate into grade point average before grades are final.</p>
+          </div>
+        </div>
+        <div class="longform__grid">
+          <article>
+            <h3>1. Enter or import your courses</h3>
+            <p>
+              Add every lecture, lab, or elective you want to track. The calculator accepts unlimited rows and respects
+              fractional credit hours so you can mirror any transcript or degree audit.
+            </p>
+          </article>
+          <article>
+            <h3>2. Adjust credits and letter grades</h3>
+            <p>
+              Credits drive the weight of each course in the GPA formula. Update letter grades to instantly recalculate
+              quality points using the fixed 4.0 scale, including plus and minus variations.
+            </p>
+          </article>
+          <article>
+            <h3>3. Review the running summary</h3>
+            <p>
+              The summary panel highlights your cumulative GPA, attempted credits, and total quality points. Use it to
+              test best-case senior-year plans, transfer evaluations, or academic recovery paths.
+            </p>
+          </article>
+        </div>
+        <div class="cta">
+          <p class="lede">Need a quick answer for an advisor or scholarship form?</p>
+          <button class="btn btn--primary" id="addCourseBottom">Start planning now</button>
+        </div>
+      </section>
+
+      <section id="faq" class="container card card--longform" aria-labelledby="faq-title">
+        <div class="card__header">
+          <div>
+            <h2 id="faq-title">GPA calculator FAQ</h2>
+            <p class="muted">Top search questions answered for students comparing GPA tools.</p>
+          </div>
+        </div>
+        <dl class="faq">
+          <div class="faq__item">
+            <dt>Is this GPA calculator accurate for college transcripts?</dt>
+            <dd>
+              Yes. The math uses the standard four-point grading scale with support for plus/minus grades so it mirrors
+              what most U.S. colleges publish. Always confirm if your institution applies custom weights for honors or
+              AP classes.
+            </dd>
+          </div>
+          <div class="faq__item">
+            <dt>Can I track multiple semesters?</dt>
+            <dd>
+              Absolutely. Create separate rows for each term, or export your current plan to a spreadsheet when you need
+              to archive it. Nothing is stored on the server, which keeps your data private.
+            </dd>
+          </div>
+          <div class="faq__item">
+            <dt>How are quality points calculated?</dt>
+            <dd>
+              We multiply the credit hours by the numeric value of each letter grade. For example, 3 credits of a B+
+              course contribute 9.9 quality points (3 credits × 3.3 points).
+            </dd>
+          </div>
+          <div class="faq__item">
+            <dt>Does this tool work for high school GPAs?</dt>
+            <dd>
+              Yes, as long as your school reports on the 4.0 scale. If you need weighted AP or IB calculations, enter the
+              adjusted grade values your counselor provides.
+            </dd>
+          </div>
+        </dl>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container footer__content">
+        <p>
+          © <span id="currentYear"></span> GPA Calculator. Built for students, advisors, and counselors who need fast,
+          reliable GPA projections.
+        </p>
+        <a href="mailto:hello@gpa-calculator.app" class="footer__link">Contact support</a>
+      </div>
+    </footer>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is this GPA calculator accurate for college transcripts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The calculator follows the standard four-point grading scale with support for plus and minus grades, which matches what most U.S. colleges publish."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I track multiple semesters?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Add as many rows as you need and optionally export your plan when you want to archive it; no data is stored on the server."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How are quality points calculated?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Quality points equal credit hours multiplied by the numeric value of each letter grade on the 4.0 scale."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does this tool work for high school GPAs?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Use it for any 4.0-scale GPA, and plug in the weighted values supplied by your counselor for AP or IB courses."
+            }
+          }
+        ]
+      }
+    </script>
 
     <script type="module" src="src/main.js"></script>
   </body>
