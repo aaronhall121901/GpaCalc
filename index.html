@@ -38,7 +38,11 @@
       content="Plug in credits and letter grades to forecast your GPA on the standard 4.0 scale."
     />
     <meta name="twitter:image" content="https://gpa-calculator.app/social-card.png" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" href="styles.css" as="style" />
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="styles.css" />
+    </noscript>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -281,6 +285,8 @@
       }
     </script>
 
+    <link rel="modulepreload" href="src/main.js" />
+    <link rel="modulepreload" href="src/gpa.js" />
     <script type="module" src="src/main.js"></script>
   </body>
 </html>
